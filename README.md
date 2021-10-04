@@ -1,2 +1,94 @@
 # Python-class-121
 invisible cloak
+
+Steps to Build Invisible Cloak OpenCV Project:
+Now we have everything ready. Below are the steps to create invisible cloak:
+
+Import necessary packages and Initialize the camera.
+Store a single frame before starting the infinite loop.
+Detect the color of the cloth and create a mask.
+Apply the mask on frames.
+Combine masked frames together.
+Removing unnecessary noise from masks.
+---------------------------------------------------------------------------------------
+
+Step 1 – Import necessary packages and Initialize the camera:
+
+Explanation:
+
+Using import, we imported the required libraries
+To access the camera, we use the method cv2.VideoCapture(0) and set the capture object as cap.
+
+--------------------------------------------------------------------------------------------------------------
+
+Step 2 – Store a single frame before starting the infinite loop:
+
+Explanation:
+
+
+cap.read() function captures frames from webcam.
+2-second delay between two captures are for adjusting camera auto exposure
+cap.isOpen() function checks if the camera is open or not and returns true if the camera is open and false if the camera is not open.
+While capturing the background make sure that you or your clothes don’t accidentally come into the frame.
+
+--------------------------------------------------------------------------------------------------------------
+
+
+Step 3 – Detect the cloth:
+
+In this invisible cloak opencv project, we are using green cloth so we have to detect green color. So how can we do this?
+
+OpenCV reads the frame as BGR colorspace. To detect any color first we have to convert the frame to HSV colorspace.
+
+Why HSV?
+
+HSV stands for HUE, SATURATION, and VALUE (or brightness). It is a cylindrical color space.
+
+HUE: The hues are modeled as an angular dimension which encodes color information.
+SATURATION: Saturation encodes intensity of color.
+VALUE: Value represents the brightness of the color.
+
+Explanation:
+
+cv2.cvtColor() function converts colorspace.
+Lower bound and Upper bound are the boundaries of green color.
+cv2.inRange() function returns a segmented binary mask of the frame where the green color is present.
+
+--------------------------------------------------------------------------------------------------------------
+
+Step 4 – Apply the mask:
+We have successfully detected the cloak. We want to show our previously-stored 
+background in the main frame where the cloak is present. First, we need to take the only white region from the background.
+
+Explanation:
+
+cv2.bitwise_and() applies mask on frame in the region where mask is true (means white).
+
+cv2.bitwise_not() inverse the mask pixel value. Where the mask is white it returns black and where is black it returns white.
+
+--------------------------------------------------------------------------------------------------------------
+
+Step 5 – Combine masked frames together:
+
+Finally, we have a cloak background and current frame background. Now it’s time to combine those to get a whole frame.
+
+Explanation:
+
+cv2.add() adds two frames and returns a single frame.
+
+--------------------------------------------------------------------------------------------------------------
+
+Step 6 – Removing unnecessary noise from mask :
+
+Explanation:
+
+np.ones((5,5),np.uint8) create a 5×5 8 bit integer matrix.
+Adjust kernel size according to your condition.
+cv2.MORPH_CLOSE removes unnecessary black noise from the white region in the mask. And how much noise to remove that is defined by kernel size.
+cv2.MORPH_OPEN removes unnecessary white noise from the black region.
+cv2.dilate increases white region in the image.
+
+--------------------------------------------------------------------------------------------------------------
+
+
+https://data-flair.training/blogs/invisible-cloak-opencv-python/
