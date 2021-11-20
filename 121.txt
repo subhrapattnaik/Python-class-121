@@ -14,3 +14,15 @@ AVI files is the most widespread, or the first widely used media file format, to
 
 Some of the more well known FOURCCs include "DIVX", "XVID", "H264", "DX50". But these are just a few of the hundreds in use.
 ---------------------------------------------------------------
+
+cv2.cvtColor()  
+takes 2 parameters (input image,type of conversion)
+
+convert image from BGR to HSV(Hue,Saturation,Value)
+
+conversion can also be done from BGR to gray scale
+
+------------------------------------------------------
+
+https://www.codespeedy.com/color-detection-using-opencv-in-python/
+
