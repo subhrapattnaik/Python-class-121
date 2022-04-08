@@ -1,6 +1,15 @@
 # Python-class-121
 invisible cloak
 
+create the invisible cloak using an image processing technique called Color detection and segmentation. In order to make this project, you’ll need a single-color cloth. The cloth should not contain any other color visible. Here we are using a green cloth to develop this python project.
+
+
+Color detection is a technique where we can detect any color in a given range of HSV color space.
+
+Image segmentation is the process of labeling every pixel in an image, where each pixel having the same label shares certain characteristics.
+
+----------------------------------------------
+
 Steps to Build Invisible Cloak OpenCV Project:
 Now we have everything ready. Below are the steps to create invisible cloak:
 
