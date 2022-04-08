@@ -99,5 +99,7 @@ cv2.dilate increases white region in the image.
 
 --------------------------------------------------------------------------------------------------------------
 
+https://machinelearningknowledge.ai/opencv-cv2-waitkey-tutorial-with-examples/
+
 
 https://data-flair.training/blogs/invisible-cloak-opencv-python/
