@@ -103,3 +103,12 @@ https://machinelearningknowledge.ai/opencv-cv2-waitkey-tutorial-with-examples/
 
 
 https://data-flair.training/blogs/invisible-cloak-opencv-python/
+--------------
+
+
+
+
+
+Look at this image, this hsv Chart of colors according to opencv2 library(in opencv2 Hue has value from 0-179, Saturation from 0-255, and value from 0-255). The x-axis represents Hue in [0,179), the y-axis1 represents Saturation in [0,255], the y-axis2 represents S = 255, while keep V = 255. To find a color, usually just look up for the range of H and S, and set v in range(20, 255).
+
+To find the orange color, we look up for the map, and find the best range: H :[10, 25], S: [100, 255], and V: [20, 255]. So the mask is cv2.inRange(hsv,(10, 100, 20), (25, 255, 255) )
