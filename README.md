@@ -104,7 +104,7 @@ https://machinelearningknowledge.ai/opencv-cv2-waitkey-tutorial-with-examples/
 
 https://data-flair.training/blogs/invisible-cloak-opencv-python/
 --------------
-
+https://machinelearningknowledge.ai/make-your-own-invisibility-cloak-using-opencv-python-like-harry-potter-movie/
 
 
 
