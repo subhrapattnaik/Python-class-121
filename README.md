@@ -1,6 +1,6 @@
 # Python-class-121
 invisible cloak
-
+https://pysource.com/2021/10/19/simple-color-recognition-with-opencv-and-python/
 create the invisible cloak using an image processing technique called Color detection and segmentation. In order to make this project, you’ll need a single-color cloth. The cloth should not contain any other color visible. Here we are using a green cloth to develop this python project.
 
 
